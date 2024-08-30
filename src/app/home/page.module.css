@@ -1,0 +1,40 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a202c;
+}
+
+.card {
+    background-color: #2d3748;
+    color: #a0aec0;
+    border: 1px solid #4a5568;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 40%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submitButton {
+    width: 300px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-transform: none;
+}
+
+.leagueIdInput {
+    width: 300px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}

@@ -4,14 +4,13 @@ import { signIn } from "next-auth/react"
 import { Button } from "@mui/material"
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardHeader from '@mui/material/CardHeader';
 import CardActions from '@mui/material/CardActions';
 import Typography from '@mui/material/Typography';
 import styles from './page.module.css';
 
 export default function Login() {
     const handleGoogleSignIn = () => {
-        signIn("google", { callbackUrl: "/" })
+        signIn("google", { callbackUrl: "/home" })
     }
 
     return (
