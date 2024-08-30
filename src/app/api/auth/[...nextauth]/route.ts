@@ -9,10 +9,26 @@ export const authOptions: NextAuthOptions = {
         }),
     ],
     callbacks: {
+        // async signIn({ user, account, profile }) {
+        //     if (user.email) {
+        //         // Call your API to create or update the user account
+        //         const response = await fetch('YOUR_API_ENDPOINT', {
+        //             method: 'POST',
+        //             headers: {
+        //                 'Content-Type': 'application/json',
+        //             },
+        //             body: JSON.stringify({ email: user.email }),
+        //         });
+
+        //         if (!response.ok) {
+        //             console.error('Failed to create/update user account');
+        //             return false; // Optionally prevent sign in if API call fails
+        //         }
+        //     }
+        //     return true;
+        // },
         async session({ session, token }) {
-            console.log("CALLED SESSION");
             if (session.user) {
-                session.user.email = token.email;
                 console.log("User signed in with email:", session.user.email);
             }
             return session;
